@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "ru");
+    const string text = "да да, я";
+    const size_t posBeg = text.find(" "), posEnd = text.find_last_of(",", text.size() - posBeg);
+    if (posBeg != string::npos && posEnd != string::npos)
+        cout << text.substr(posBeg + 1, posEnd - posBeg - 1);
+    else
+        cout << text;
+
+}
