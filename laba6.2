@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	string message1;
+	string message2;
+	string message3;
+	cout << "введите имя: " << endl;
+	getline(cin, message1);
+	cout << "введите фамилию: "<< endl;
+	getline(cin, message2);
+	cout << "введите отчество: " << endl;
+	getline(cin, message3);
+	string messageUltra = message1 + message2 + message3;
+	cout << messageUltra;
+	char a{ message1[0] };
+	char b{ message2[0] };
+	char c{ message3[0] };
+	cout <<"\n" << "ваши инициалы: " << a<<". " << b << ". " << c<<"."<<endl;
+}
