@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	string pos;
+	
+	cout << "введите последовательность букавы" << endl;
+	getline(cin, pos);
+	string chars = "gv";
+	
+	for (char c : chars) {
+		pos.erase(remove(pos.begin(), pos.end(), c), pos.end());
+	}
+	cout << pos;
+	return 0;
+}
