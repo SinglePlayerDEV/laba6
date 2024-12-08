@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "ru");
+	unsigned i{1};
+    string message1;
+	cout << "введите слово 1: " << endl;
+	getline(cin, message1);
+	char c{message1[0]};
+	cout << c;
+	string message2;
+	cout <<"\n"<< "введите слово 2: ";
+	getline(cin, message2);
+	for (char f : message2) {
+		if (f == c) {
+			i++;
+		}
+	}
+    cout << "первая буква первого слова встречается во втором слове: " << i << " раз" << endl;
+
+}
